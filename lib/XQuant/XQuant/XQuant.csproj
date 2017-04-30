@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEF43E44-A86C-496E-99FB-AF148C7988EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XQuant</RootNamespace>
+    <AssemblyName>XQuant</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="alglibnet2">
+      <HintPath>..\..\PatternTools\dependencies\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\PatternTools\dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssociationItem.cs" />
+    <Compile Include="Core35.cs" />
+    <Compile Include="CoreXtractor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CoreXtractor.Designer.cs">
+      <DependentUpon>CoreXtractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quants\Quant.cs" />
+    <Compile Include="Quants\QuantPackage2.cs" />
+    <Compile Include="UserControlClassEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlClassEditor.Designer.cs">
+      <DependentUpon>UserControlClassEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XICExplorerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XICExplorerWindow.Designer.cs">
+      <DependentUpon>XICExplorerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XICToy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XICToy.Designer.cs">
+      <DependentUpon>XICToy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XQuantClusteringParameters.cs" />
+    <Compile Include="GenerateSearchingRules.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenerateSearchingRules.Designer.cs">
+      <DependentUpon>GenerateSearchingRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parameters.Designer.cs">
+      <DependentUpon>Parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SEProFileInfo.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="XICExplorer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XICExplorer.Designer.cs">
+      <DependentUpon>XICExplorer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CoreXtractor.resx">
+      <DependentUpon>CoreXtractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateSearchingRules.resx">
+      <DependentUpon>GenerateSearchingRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameters.resx">
+      <DependentUpon>Parameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlClassEditor.resx">
+      <DependentUpon>UserControlClassEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XICExplorer.resx">
+      <DependentUpon>XICExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XICExplorerWindow.resx">
+      <DependentUpon>XICExplorerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XICToy.resx">
+      <DependentUpon>XICToy.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PatternTools\PatternTools.csproj">
+      <Project>{6d69c8a1-9d73-4e86-956f-bbf3392496c9}</Project>
+      <Name>PatternTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PLP\PLP.csproj">
+      <Project>{08c2b4d7-20dd-4c42-8f27-c9a42afe499d}</Project>
+      <Name>PLP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SEPRPackage\SEPRPackage.csproj">
+      <Project>{7e2ab1fb-3420-41d3-9028-6aa4bae3da90}</Project>
+      <Name>SEPRPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XICViewerWPF\XICViewerWPF\XICViewerWPF.csproj">
+      <Project>{09338e23-0fdd-4f5e-8f0f-b770bf684527}</Project>
+      <Name>XICViewerWPF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D69C8A1-9D73-4E86-956F-BBF3392496C9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PatternTools</RootNamespace>
+    <AssemblyName>patternTools</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <ApplicationIcon>patternLabIcon.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alglibnet2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dependencies\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="CSMSL.Thermo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\CSMSL.Thermo.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSFileReaderLib">
+      <HintPath>..\..\Resources\Interop.MSFileReaderLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACTest.cs" />
+    <Compile Include="ArrowHeads\ArrowDeNovo.cs" />
+    <Compile Include="ArrowHeads\ArrowEnds.cs" />
+    <Compile Include="ArrowHeads\ArrowLine.cs" />
+    <Compile Include="ArrowHeads\ArrowLineBase.cs" />
+    <Compile Include="ArrowHeads\ArrowPolyline.cs" />
+    <Compile Include="CommandLineParser.cs" />
+    <Compile Include="Compare.cs" />
+    <Compile Include="Compression.cs" />
+    <Compile Include="Deisotoping\SignalGenerator.cs" />
+    <Compile Include="Deisotoping\Spline3.cs" />
+    <Compile Include="DirectoryClassDescription.cs" />
+    <Compile Include="DNA2Protein.cs" />
+    <Compile Include="EnzymeEvaluator.cs" />
+    <Compile Include="FastaParser\FastaItem.cs" />
+    <Compile Include="GaussianDiscriminant\ClassPackage.cs" />
+    <Compile Include="GaussianDiscriminant\StabilityVerifier.cs" />
+    <Compile Include="HeatMap.xaml.cs">
+      <DependentUpon>HeatMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HistogramHelper.cs" />
+    <Compile Include="IPLDiscriminator.cs" />
+    <Compile Include="KyteDoolittle.cs" />
+    <Compile Include="LstSquQuadRegr.cs" />
+    <Compile Include="MSParserLight\MSUltraLight.cs" />
+    <Compile Include="MSParserLight\MSUltraLightPrinter.cs" />
+    <Compile Include="MSParserLight\ParserUltraLightMS2.cs" />
+    <Compile Include="MSParserLight\ParserUltraLightRAW.cs" />
+    <Compile Include="SQTParser2\ID.cs" />
+    <Compile Include="SQTParser2\Match.cs" />
+    <Compile Include="SQTParser\ScanHeader.cs" />
+    <Compile Include="SQTParser2\SQTParser2.cs" />
+    <Compile Include="SQTParser2\SQTScan2.cs" />
+    <Compile Include="MSParserLight\MSLight.cs" />
+    <Compile Include="MSParserLight\MSLightPrinter.cs" />
+    <Compile Include="MSParserLight\ParserLight.cs" />
+    <Compile Include="MSParser\IonLight.cs" />
+    <Compile Include="MSParser\DeisotopeTools.cs" />
+    <Compile Include="MSParser\Identification.cs" />
+    <Compile Include="MSParser\LargeFileMSParser.cs" />
+    <Compile Include="MSParser\MGFParser.cs" />
+    <Compile Include="MSParser\MSFileFormat.cs" />
+    <Compile Include="MultipleDirectorySelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultipleDirectorySelector.Designer.cs">
+      <DependentUpon>MultipleDirectorySelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectCopier.cs" />
+    <Compile Include="PTMMods\DefaultModifications.cs" />
+    <Compile Include="RawReader\RawReaderParams.cs" />
+    <Compile Include="RawReader\Reader.cs" />
+    <Compile Include="SkewedNormal.cs" />
+    <Compile Include="SortableBindingList.cs" />
+    <Compile Include="SparseMatrix\ClassSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SparseMatrix\ClassSelection.Designer.cs">
+      <DependentUpon>ClassSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PTMMods\ModificationItem.cs" />
+    <Compile Include="PTMMods\ModificationBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PTMMods\ModificationBox.Designer.cs">
+      <DependentUpon>ModificationBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpectraPrediction\PredictedIon.cs" />
+    <Compile Include="SpectraPrediction\SpectralPredictionParameters.cs" />
+    <Compile Include="SpectrumComparisonResult.cs" />
+    <Compile Include="SpectrumViewer\SpectrumViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpectrumViewer\SpectrumViewerForm.Designer.cs">
+      <DependentUpon>SpectrumViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQTParser\SQTLight.cs" />
+    <Compile Include="SQTParser\SQTScan.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\GraphNode.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\GraphSearch.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\PathCandidate.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\RegexGenerationParams.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\RegexGenerator.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\SequentialScore\ScoredSequence.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\SequentialScore\SequentialScore.cs" />
+    <Compile Include="T-ReXS\RegexGenerationTools\SequentialScore\SequentialScoreOld.cs" />
+    <Compile Include="T-ReXS\SearchEngine\DenovoSolution.cs" />
+    <Compile Include="T-ReXS\SearchEngine\SearchEngine.cs" />
+    <Compile Include="T-ReXS\SearchEngine\SearchResults.cs" />
+    <Compile Include="TheTests.cs" />
+    <Compile Include="VennProbability\IntersectionResult.cs" />
+    <Compile Include="VennProbability\IntersectionResultAnalysis.cs" />
+    <Compile Include="VennProbability\ResultPrinter.cs" />
+    <Compile Include="VennProbability\VennProbabilityCalculator.cs" />
+    <Compile Include="Forms\ErrorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorWindow.Designer.cs">
+      <DependentUpon>ErrorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastaParser\FastaFileParser.cs" />
+    <Compile Include="Forms\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaussianDiscriminant\Discriminant.cs" />
+    <Compile Include="HypergeometricCalculator.cs" />
+    <Compile Include="KernelDensityEstimator.cs" />
+    <Compile Include="KernelRegressor.cs" />
+    <Compile Include="MatrixOperations\Complex.cs" />
+    <Compile Include="MatrixOperations\Matrix.cs" />
+    <Compile Include="MSParser\DataDependantMS2Parser.cs" />
+    <Compile Include="MSParser\Ion.cs" />
+    <Compile Include="MSParser\MS.cs" />
+    <Compile Include="MSParser\MS2PrecursorFinder.cs" />
+    <Compile Include="MSParser\MSCleaner.cs" />
+    <Compile Include="MSParser\MSFile.cs" />
+    <Compile Include="MSParser\MSPrinter.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="pTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SparseMatrix\sparseMatrix.cs" />
+    <Compile Include="SparseMatrix\SparseMatrixIndexParser.cs" />
+    <Compile Include="SparseMatrix\sparseMatrixRow.cs" />
+    <Compile Include="AminoAcidMasses.cs" />
+    <Compile Include="SpectraPrediction\IonSeries.cs" />
+    <Compile Include="SpectraPrediction\SpectraPredictor.cs" />
+    <Compile Include="SpectrumViewer\MSViewer.xaml.cs">
+      <DependentUpon>MSViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SQTParser\SQTParser.cs" />
+    <Compile Include="Forms\WaitWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WaitWindow.Designer.cs">
+      <DependentUpon>WaitWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowser\browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowser\browser.Designer.cs">
+      <DependentUpon>browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XIC\IonCluster.cs" />
+    <Compile Include="XIC\SequenceHit.cs" />
+    <Compile Include="XIC\XICGet40.cs" />
+    <Compile Include="XIC\XICGet5.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ErrorWindow.resx">
+      <DependentUpon>ErrorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleDirectorySelector.resx">
+      <DependentUpon>MultipleDirectorySelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WaitWindow.resx">
+      <DependentUpon>WaitWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SparseMatrix\ClassSelection.resx">
+      <DependentUpon>ClassSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PTMMods\ModificationBox.resx">
+      <DependentUpon>ModificationBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpectrumViewer\SpectrumViewerForm.resx">
+      <DependentUpon>SpectrumViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowser\browser.resx">
+      <DependentUpon>browser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\CSMSL.Thermo.dll" />
+    <Content Include="resources\Interop.MSFileReaderLib.dll" />
+    <None Include="images\loader.gif" />
+    <Compile Include="GaussianDiscriminant\ClassScoreDictionary.cs" />
+    <Content Include="dependencies\Accord.dll" />
+    <Content Include="dependencies\Accord.MachineLearning.dll" />
+    <Content Include="dependencies\Accord.Math.dll" />
+    <Content Include="dependencies\Accord.Statistics.dll" />
+    <Content Include="dependencies\AForge.dll" />
+    <Content Include="dependencies\alglibnet2.dll" />
+    <Content Include="dependencies\BelaGraph.dll" />
+    <Content Include="dependencies\Microsoft.GLEE.dll" />
+    <Content Include="dependencies\Microsoft.GLEE.Drawing.dll" />
+    <Content Include="dependencies\Microsoft.GLEE.GraphViewerGDI.dll" />
+    <Content Include="dependencies\Newtonsoft.Json.dll" />
+    <Content Include="dependencies\Xceed.Wpf.AvalonDock.dll" />
+    <Content Include="dependencies\Xceed.Wpf.AvalonDock.Themes.Aero.dll" />
+    <Content Include="dependencies\Xceed.Wpf.AvalonDock.Themes.Metro.dll" />
+    <Content Include="dependencies\Xceed.Wpf.AvalonDock.Themes.VS2010.dll" />
+    <Content Include="dependencies\Xceed.Wpf.DataGrid.dll" />
+    <Content Include="dependencies\Xceed.Wpf.Toolkit.dll" />
+    <Content Include="patternLabIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HeatMap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SpectrumViewer\MSViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MSParser\ChargePredictionMachineUtils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSMSL-develop\CSMSL.csproj">
+      <Project>{3c8c9f05-9c19-4251-95fa-05d7edc8cae6}</Project>
+      <Name>CSMSL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

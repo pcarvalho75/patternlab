@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B57CBB49-0570-4468-8BC0-60E8465F6305}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEProcessor</RootNamespace>
+    <AssemblyName>SEP</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://pcarvalho.com/patternlab/downloads/windows/seprocessor/</InstallUrl>
+    <UpdateUrl>http://pcarvalho.com/patternlab/downloads/windows/seprocessor/</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Search Engine Processor</ProductName>
+    <PublisherName>Pattern Lab for Proteomics</PublisherName>
+    <SuiteName>SEPro</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>2.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9BCAD98CF2A6EE9B6929F568173D1E43DDE8913C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SEProcessor_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>SQTProcessorLogoForIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alglibnet2">
+      <HintPath>..\PatternTools\dependencies\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.GLEE">
+      <HintPath>..\PatternTools\dependencies\Microsoft.GLEE.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.GLEE.Drawing">
+      <HintPath>..\PatternTools\dependencies\Microsoft.GLEE.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.GLEE.GraphViewerGDI">
+      <HintPath>..\PatternTools\dependencies\Microsoft.GLEE.GraphViewerGDI.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OxyPlot.Core.1.0.0\lib\net45\OxyPlot.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OxyPlot.Wpf.1.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classifier\SpectraScoringAndCleaning.cs" />
+    <Compile Include="Classifier\Utils.cs" />
+    <Compile Include="ExtractFasta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtractFasta.Designer.cs">
+      <DependentUpon>ExtractFasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainControl.Designer.cs">
+      <DependentUpon>MainControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeepTrack.cs" />
+    <Compile Include="LockMass\MLLM.cs" />
+    <Compile Include="LockMass\MLLMFileInterpolant.cs" />
+    <Compile Include="Path.cs" />
+    <Compile Include="PeptideManager.cs" />
+    <Compile Include="PPMDistributionViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPMDistributionViewer.Designer.cs">
+      <DependentUpon>PPMDistributionViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPMHeatMap\FormPPMHeatMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPMHeatMap\FormPPMHeatMap.Designer.cs">
+      <DependentUpon>FormPPMHeatMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGenerator.cs" />
+    <Compile Include="Result\ChargeStateDistribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\ChargeStateDistribution.Designer.cs">
+      <DependentUpon>ChargeStateDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\GroupGraph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Result\GroupGraph.Designer.cs">
+      <DependentUpon>GroupGraph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\LengthQuantCore.xaml.cs">
+      <DependentUpon>LengthQuantCore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Result\SequenceExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\SequenceExplorer.Designer.cs">
+      <DependentUpon>SequenceExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Result\ResultViewer.xaml.cs">
+      <DependentUpon>ResultViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Result\SequenceViewer.xaml.cs">
+      <DependentUpon>SequenceViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Result\SpecBrowserControl.xaml.cs">
+      <DependentUpon>SpecBrowserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Result\WindowLengthQuant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\WindowLengthQuant.Designer.cs">
+      <DependentUpon>WindowLengthQuant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaveMS2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveMS2.Designer.cs">
+      <DependentUpon>SaveMS2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SEProConn.cs" />
+    <Compile Include="SEProFusion\Fusion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SEProFusion\Fusion.Designer.cs">
+      <DependentUpon>Fusion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HMM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ExtractFasta.resx">
+      <DependentUpon>ExtractFasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainControl.resx">
+      <DependentUpon>MainControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPMDistributionViewer.resx">
+      <DependentUpon>PPMDistributionViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPMHeatMap\FormPPMHeatMap.resx">
+      <DependentUpon>FormPPMHeatMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Result\ChargeStateDistribution.resx">
+      <DependentUpon>ChargeStateDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\GroupGraph.resx">
+      <DependentUpon>GroupGraph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\SequenceExplorer.resx">
+      <DependentUpon>SequenceExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\WindowLengthQuant.resx">
+      <DependentUpon>WindowLengthQuant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveMS2.resx">
+      <DependentUpon>SaveMS2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SEProFusion\Fusion.resx">
+      <DependentUpon>Fusion.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProteinCoverageViewer.HMMService.HMMResult.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\HMM\HMM.wsdl" />
+    <None Include="Service References\HMM\SEProcessor.HMM.HMMResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HMM\ServiceHMM.xsd" />
+    <None Include="Service References\HMM\ServiceHMM1.xsd" />
+    <None Include="Service References\HMM\ServiceHMM2.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="alglibnet2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MagnifyingLens.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="magnifyinglens.png">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.GLEE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.GLEE.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Glee.GraphViewerGDI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="patternTools">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SEPRPackage">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SQTProcessorLogoForIcon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="magnifyinglens.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\HMM\ServiceHMM.disco" />
+    <None Include="Service References\HMM\configuration91.svcinfo" />
+    <None Include="Service References\HMM\configuration.svcinfo" />
+    <None Include="Service References\HMM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SQTProcessorLogoForIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".sepr">
+      <Visible>False</Visible>
+      <Description>SEPro File</Description>
+      <Progid>SEPro</Progid>
+      <DefaultIcon>SQTProcessorLogoForIcon.ico</DefaultIcon>
+    </FileAssociation>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Result\LengthQuantCore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Result\ResultViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Result\SequenceViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Result\SpecBrowserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PatternTools\PatternTools.csproj">
+      <Project>{6d69c8a1-9d73-4e86-956f-bbf3392496c9}</Project>
+      <Name>PatternTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PepExplorer\ProteinCoverageViewer\ProteinCoverageViewer.csproj">
+      <Project>{1883c8fa-8778-41fb-955c-1267fe9dd5fb}</Project>
+      <Name>ProteinCoverageViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RawReader\RawReader\RawReader.csproj">
+      <Project>{ab6e08a7-d4b8-48ab-87ff-7202dffc2983}</Project>
+      <Name>RawReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SEPRPackage\SEPRPackage.csproj">
+      <Project>{7e2ab1fb-3420-41d3-9028-6aa4bae3da90}</Project>
+      <Name>SEPRPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="NextProt\NextProt\NextProt.csproj">
+      <Project>{695300e1-f680-4024-886b-4c13fad7ee80}</Project>
+      <Name>NextProt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HMM\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

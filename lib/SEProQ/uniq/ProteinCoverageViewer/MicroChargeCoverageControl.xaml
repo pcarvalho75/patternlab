@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="ProteinCoverageViewer.MicroChargeCoverageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="14" d:DesignWidth="131" MaxHeight="14" MaxWidth ="131">
+    <Grid>
+        <Border BorderBrush="LightBlue" x:Name ="MyBorder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" CornerRadius="2"  BorderThickness="1">
+            <Canvas x:Name="MyCanvas" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFF8F9E6" Margin="1,1,1,1">
+            
+            </Canvas>
+        </Border>
+
+    </Grid>
+</UserControl>

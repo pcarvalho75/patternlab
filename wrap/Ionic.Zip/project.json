@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "bin": {
+        "assembly": "../../lib/CSMSL-develop/CSMSL/IO/MzML/bin/Debug/Ionic.Zip.dll"
+      }
+    }
+  }
+}

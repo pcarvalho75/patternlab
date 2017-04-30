@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "bin": {
+        "assembly": "../../lib/CSMSL-develop/CSMSL/IO/MzML/bin/Debug/CSMSL.MzML.dll",
+        "pdb": "../../lib/CSMSL-develop/CSMSL/IO/MzML/bin/Debug/CSMSL.MzML.pdb"
+      },
+      "dependencies": {
+        "CSMSL": "1.0.0-*",
+        "Ionic.Zip": "1.0.0-*"
+      }
+    }
+  }
+}

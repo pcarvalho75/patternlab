@@ -1,0 +1,877 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PatternLab</RootNamespace>
+    <AssemblyName>PatternLab</AssemblyName>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2B55594-2C73-44BA-B146-EC5C989B5BD0}</ProjectGuid>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SignManifests>false</SignManifests>
+    <ManifestCertificateThumbprint>84EED7733BB652C98FB5CD5E739E3D5A2A400BE0</ManifestCertificateThumbprint>
+    <ApplicationIcon>logoIcon48x48.ico</ApplicationIcon>
+    <GenerateManifests>true</GenerateManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestKeyFile>PatternLab_TemporaryKey.pfx</ManifestKeyFile>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <StartupObject>
+    </StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>PublishCD\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <UpdateUrl>http://pcarvalho.com/patternlab/downloads/windows/patternlab/</UpdateUrl>
+    <SupportUrl>http://pcarvalho.com/patternlab</SupportUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Pattern Lab for Proteomics</ProductName>
+    <PublisherName>Pattern Lab for Proteomics</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>4.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsFormsIntegration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\WindowsFormsIntegration\3.0.0.0__31bf3856ad364e35\WindowsFormsIntegration.dll</HintPath>
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AboutBox2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox2.Designer.cs">
+      <DependentUpon>AboutBox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainEntry.Designer.cs">
+      <DependentUpon>MainEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Forms\WhatIsNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WhatIsNew.Designer.cs">
+      <DependentUpon>WhatIsNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SparseMatrixIndexLegacy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SparseMatrixIndexLegacy.Designer.cs">
+      <DependentUpon>SparseMatrixIndexLegacy.cs</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutBox2.resx">
+      <DependentUpon>AboutBox2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainEntry.resx">
+      <DependentUpon>MainEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WhatIsNew.resx">
+      <DependentUpon>WhatIsNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SparseMatrixIndexLegacy.resx">
+      <DependentUpon>SparseMatrixIndexLegacy.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Images\logoIcon48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DPIAwareCode.txt" />
+    <None Include="Images\buttons\UTILHistogram.png" />
+    <Content Include="Images\exclamation.png" />
+    <Content Include="Images\exclamationBWsmall.png" />
+    <Content Include="Images\exclamationSmall.png" />
+    <Content Include="Resources\Ionic.Zip.dll" />
+    <Content Include="Resources\XRawfile2_x64.dll" />
+    <Content Include="SQTProcessorLogoForIcon.ico" />
+    <None Include="Resources\New.jpg" />
+    <None Include="Images\buttons\AYellow.png" />
+    <None Include="Images\buttons\FYellow.png" />
+    <None Include="Images\new.png" />
+    <None Include="lib\SEPro\images\SQTProcessorLogoForIcon.png" />
+    <None Include="lib\PepExplorer\PepExplorer2\Images\PexLogo.png" />
+    <None Include="Images\update.png" />
+    <None Include="Images\interrogation_icon.png" />
+    <None Include="Images\book.png" />
+    <None Include="Images\buttons\xicBrowser.png" />
+    <None Include="Images\buttons\isobaricBrowser.png" />
+    <None Include="Images\buttons\UTILSindexSparseMatrix.png" />
+    <None Include="Images\buttons\UTILMassSpectraFile.png" />
+    <None Include="Images\buttons\UTILRawReader.png" />
+    <None Include="Images\buttons\UTILXDScoring.png" />
+    <Content Include="logoIcon48x48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="lib\ACFold\parserGUI\XFold.csproj">
+      <Project>{31dbb047-5693-49fc-8015-dbc9868b359b}</Project>
+      <Name>XFold</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\Anova\Anova.csproj">
+      <Project>{e6bda195-1905-4154-bce1-e12b2831521f}</Project>
+      <Name>Anova</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\BelaGraph\BelaGraph.csproj">
+      <Project>{ef3ee654-49b2-4181-b0a9-e3d2b8b4f2d7}</Project>
+      <Name>BelaGraph</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\Buzios\ProteomicsCluster\Buzios.csproj">
+      <Project>{96e80bc4-c3dc-4512-8523-edf248bd03c8}</Project>
+      <Name>Buzios</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\CommetWrapper\CommetWrapper\CometWrapper.csproj">
+      <Project>{c67a6460-34cf-475f-b79b-1539753216ed}</Project>
+      <Name>CometWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\GO\GO\GO.csproj">
+      <Project>{c50bd19b-b6d8-4fb1-9dcd-6a49ed221f67}</Project>
+      <Name>GO</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\Histogram\Histogram\Histogram.csproj">
+      <Project>{d329a319-e5b1-4786-b41b-dcb3c6d2304b}</Project>
+      <Name>Histogram</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\HMMVerifier\HMMVerifier.csproj">
+      <Project>{43579599-3389-4683-b6d2-b5692355e8e4}</Project>
+      <Name>HMMVerifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\MAligner\Aligner.csproj">
+      <Project>{add66846-34b8-496c-8988-d550564013db}</Project>
+      <Name>Aligner</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\MicroChart\MicroChart.csproj">
+      <Project>{a33ec971-3f9e-47ab-aad0-4f1fa8312786}</Project>
+      <Name>MicroChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\MSViewer\MSViewer\MSViewer.csproj">
+      <Project>{df928d29-c19d-4373-9ce7-6db2d2368e6e}</Project>
+      <Name>MSViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\NCBIExtractor\NCBIExtractor.csproj">
+      <Project>{79c8df6e-9c97-4098-ab81-c4152070c52e}</Project>
+      <Name>NCBIExtractor</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\PatternTools\PatternTools.csproj">
+      <Project>{6d69c8a1-9d73-4e86-956f-bbf3392496c9}</Project>
+      <Name>PatternTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\PepExplorer\GraphLib\GraphLib.csproj">
+      <Project>{f8bba067-2fb5-45e2-b0ff-66c4cb3f4cb4}</Project>
+      <Name>GraphLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\PepExplorer\PepExplorer2\PepExplorer.csproj">
+      <Project>{8fbb754c-2c0a-4523-80cd-d3bb45b097f5}</Project>
+      <Name>PepExplorer</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\PepExplorer\ProteinCoverageViewer\ProteinCoverageViewer.csproj">
+      <Project>{1883c8fa-8778-41fb-955c-1267fe9dd5fb}</Project>
+      <Name>ProteinCoverageViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\PeptideAnotation\PeptideAnotation.csproj">
+      <Project>{1207c110-0d29-4cf4-ab25-97b7e983efea}</Project>
+      <Name>PeptideAnotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\PLP\PLP.csproj">
+      <Project>{08c2b4d7-20dd-4c42-8f27-c9a42afe499d}</Project>
+      <Name>PLP</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\RawReader\RawReader\RawReader.csproj">
+      <Project>{ab6e08a7-d4b8-48ab-87ff-7202dffc2983}</Project>
+      <Name>RawReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\RbfClassifier\RbfClassifier.csproj">
+      <Project>{4ee435f4-c779-4c3a-8f76-b8f5ca2c955d}</Project>
+      <Name>RbfClassifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\Regrouper\Regrouper.csproj">
+      <Project>{3faee333-5176-440b-8953-1d2d63cdc9ef}</Project>
+      <Name>Regrouper</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\SEProQ\SEProQ\SeproQ.csproj">
+      <Project>{f58c1f2e-7711-4b1b-894e-3331851135f8}</Project>
+      <Name>SeproQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\SEProQ\uniq\UniQ\UniQ.csproj">
+      <Project>{0d037bce-24b9-4c77-ba40-bda077a0a0cf}</Project>
+      <Name>UniQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\SEPro\SEProcessor.csproj">
+      <Project>{b57cbb49-0570-4468-8bc0-60e8465f6305}</Project>
+      <Name>SEProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\SEPRPackage\SEPRPackage.csproj">
+      <Project>{7e2ab1fb-3420-41d3-9028-6aa4bae3da90}</Project>
+      <Name>SEPRPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\SpectrumViewer2\SpectrumViewer2\SpectrumViewer2.csproj">
+      <Project>{737f9e99-fab5-4928-a881-9d8e7efc0399}</Project>
+      <Name>SpectrumViewer2</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\TrendQuest\TrendFinder\TrendFinder\TrendQuest.csproj">
+      <Project>{d1601f5f-5a79-4e7e-b7b8-64498f5ee95c}</Project>
+      <Name>TrendQuest</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\VennWPF2\VennWPF2.csproj">
+      <Project>{1ed7a74e-3321-4689-b0c2-44809f9cf087}</Project>
+      <Name>VennWPF2</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\Venn\Venn\Venn.csproj">
+      <Project>{f5d744da-a1bc-4a39-815a-5eef7c8b4270}</Project>
+      <Name>Venn</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\XDScore\XDScore\XDScore.csproj">
+      <Project>{bd9e90e6-9226-4a11-af5d-48256cb082bf}</Project>
+      <Name>XDScore</Name>
+    </ProjectReference>
+    <ProjectReference Include="lib\XQuant\XQuant\XQuant.csproj">
+      <Project>{cef43e44-a86c-496e-99fb-af148c7988ef}</Project>
+      <Name>XQuant</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PublishFile Include="Accord">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Accord.MachineLearning">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Accord.Math">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Accord.Statistics">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="AForge">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="alglibnet2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Anova">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="BelaGraph">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Buzios">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CommetWrapper">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CSMSL">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CSMSL.MzML">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DTAParserClass">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="GO">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="GraphLib">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="HMMVerifier">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Ionic.Zip">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="logoIcon48x48.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="MAligner">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MicroChart">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.GLEE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.GLEE.Drawing">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Glee.GraphViewerGDI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="NAligner">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="NCBIExtractor">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Newtonsoft.Json">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="parserGUI">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="patternTools">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="PepExplorer2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="PeptideAnotation">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="PLP">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ProteinCoverageViewer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="RawReader">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="RbfClassifier">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Regrouper">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SEP">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SEProQ">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SEPRPackage">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SimpleChart">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SQTProcessorLogoForIcon.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="TrendQuest">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="UniQ">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Venn">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Xceed.Wpf.Toolkit">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="XDScore">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="XQuant">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SEProcessor.Result.LengthQuantCore"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:oxy="http://oxyplot.org/wpf"
+             xmlns:local="clr-namespace:SEProcessor.Result"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" Width="800">
+    <Grid>
+        <oxy:PlotView x:Name="MyPlot" Background="AliceBlue" Margin="0,50,0,0">
+            <oxy:PlotView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Save" Click="MenuItem_Click"></MenuItem>
+                </ContextMenu>
+            </oxy:PlotView.ContextMenu>
+        </oxy:PlotView>
+        <GroupBox Header="Quant" HorizontalAlignment="Left" VerticalAlignment="Top" Width="450" Height="45">
+            <Grid>
+                <RadioButton x:Name="RadioNSAF" IsChecked="True" Content="NSAF" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Checked="RadioNSAF_Checked"/>
+                <RadioButton x:Name="RadioSpecCount" Content="SpecCount" HorizontalAlignment="Left" Margin="76,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.961,0.318" Checked="RadioSpecCount_Checked"/>
+                <RadioButton x:Name="RadioSeqCount" Content="Sequence Count" HorizontalAlignment="Left" Margin="168,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.961,0.318" Checked="RadioSeqCount_Checked"/>
+                <CheckBox x:Name="CheckboxOnlyUniquePeptides" Content="OnlyUniquePeptides" HorizontalAlignment="Left" Margin="290,5,0,0" VerticalAlignment="Top" Click="CheckboxOnlyUniquePeptides_Click"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="X-Axis" HorizontalAlignment="Left" Margin="455,0,0,0" VerticalAlignment="Top" Width="240" Height="45">
+            <Grid>
+                <RadioButton x:Name="RadioButtonNoAA"  IsChecked="True" Content="NoAA" Checked="RadioButtonNoAA_Checked" Margin="0,0,118.333,0" />
+                <RadioButton x:Name="RadioButonMW" Content="MW" Margin="65,0,98.667,0" Checked="RadioButonMW_Checked"  />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

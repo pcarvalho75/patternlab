@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="SEProcessor.Result.ResultViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800">
+    <Grid>
+        <Grid Name="grid1" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="33" MinHeight="33" Height="33*" />
+                <RowDefinition MaxHeight="33" MinHeight="33" Height="33*" />
+                <RowDefinition Height="125*" />
+                <RowDefinition Height="125*" />
+            </Grid.RowDefinitions>
+            
+            <Border BorderBrush="Silver" BorderThickness="2" Grid.RowSpan="1" Grid.Row="0" HorizontalAlignment="Stretch" Name="borderForRow1" VerticalAlignment="Stretch">
+                <WrapPanel Grid.Row="1" Name="wrapPanel1" HorizontalAlignment="Center">
+                    <Label Content="Spec FDR: " Name="label1" />
+                    <Label Content="?" Grid.Row="0" Name="labelSpectraFDR" />
+                    <Label Content="Pep FDR: " Name="label2" />
+                    <Label Content="?" Grid.Row="0" Name="labelPeptideFDR" />
+                    <Label Content="Prot FDR: " Name="label3" />
+                    <Label Content="?" Grid.Row="0" Name="labelProteinFDR" />
+                    <Label Content="# Prot (Max Parsimony): " Height="28" Name="label6" />
+                    <Label Content="?" Height="28" Name="labelMaxParsimony" />
+                    <Label Content="Unique Prot: " Height="28" Name="label5" />
+                    <Label Content="?" Height="28" Name="labelUniquePtn" />
+                    <Label Content="Unlabeled Decoys: " Height="28" Name="label50" />
+                    <Label Content="?" Height="28" Name="labelUnlabeledDecoyPtns" />
+                </WrapPanel>
+            </Border>
+
+            <Border BorderBrush="Silver" BorderThickness="2" Grid.RowSpan="1" Grid.Row="1" HorizontalAlignment="Stretch" Name="borderForRow3" VerticalAlignment="Stretch">
+                <WrapPanel Grid.Row="3" Name="wrapPanel3" HorizontalAlignment="Center">
+                    <Label Content="View mode:" Height="28" Name="labelViewMode" />
+                    <RadioButton Content="Proteins" Height="16" Name="radioButtonProteinView" IsChecked="True" Margin="10,5,5,5" Checked="radioButtonProteinView_Checked" />
+                    <RadioButton Content="Proteins Max Pars" Height="16" x:Name="radioButtonProteinMaxParsView" IsChecked="False" Margin="10,5,5,5" Checked="radioButtonProteinMaxParsView_Checked" />
+                    <RadioButton Content="Peptides" Height="16" Name="radioButtonPeptideView" Margin="10,5,5,5" Checked="radioButtonPeptideView_Checked" />
+                    <RadioButton Content="Scans     " Height="16" Margin="10,5,5,5" Name="radioButtonScanView" Checked="radioButtonScanView_Checked" />
+                    <Image Height="28" Name="imageMagnifyingLens" Stretch="Fill" Width="28"/>
+                    <TextBox Height="23" Name="textBoxSearch" Width="120" TextChanged="textBoxSearch_TextChanged" Background="#FFF5F3E5" />
+
+                </WrapPanel>
+            </Border>
+
+
+            <DataGrid AutoGenerateColumns="False" Grid.Row="2" HorizontalAlignment="Stretch"  Name="dataGridPeptideSelector" VerticalAlignment="Stretch" RowBackground="WhiteSmoke"  AlternatingRowBackground="LightSeaGreen" IsReadOnly="True" SelectedCellsChanged="dataGridPeptideSelector_SelectedCellsChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Sequence" IsReadOnly="True" Binding="{Binding Path=CleanedPeptideSequence}" />
+                    <DataGridTextColumn Header="Spectrum Count" IsReadOnly="True" Binding="{Binding Path=NoMyScans}" />
+                    <DataGridTextColumn Header="Protein Count" IsReadOnly="True" Binding="{Binding Path=NoMyMapableProteins}" />
+                    <DataGridTextColumn Header="The Protein Locci" IsReadOnly="True" Binding="{Binding Path= TheProteinLocci}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            
+            <DataGrid AutoGenerateColumns="False" Grid.Row="2" HorizontalAlignment="Stretch" Name="dataGridProteins" VerticalAlignment="Stretch" Background="AntiqueWhite"  RowBackground="LightYellow" AlternatingRowBackground="LightBlue"  SelectedCellsChanged="dataGridProteins_SelectedCellsChanged" ClipToBounds="False" MouseDoubleClick="dataGridProteins_MouseDoubleClick" PreviewKeyDown="dataGridProteins_PreviewKeyDown_1" EnableColumnVirtualization="True" IsEnabled="True" IsReadOnly="False" EnableRowVirtualization="True" LoadingRow="dataGridProteins_LoadingRow">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Locus" Binding="{Binding Path=Locus}"/>
+                    <DataGridTextColumn Header="Group" Binding="{Binding Path=GroupNo}"/>
+                    <DataGridTextColumn Header="GroupType" Binding="{Binding Path=MyGroupType}"/>
+                    <DataGridTextColumn Header="Length" Binding="{Binding Path=Length}"/>
+                    <DataGridTextColumn Header="#UniquePeptides" Binding="{Binding Path=ContainsUniquePeptide}"/>
+                    <DataGridTextColumn Header="MolWt" Binding="{Binding Path=MolWt}"/>
+                    <DataGridTextColumn Header="SequenceCount" Binding="{Binding Path=SequenceCount}"/>
+                    <DataGridTextColumn Header="SpectrumCount" Binding="{Binding Path=SpectrumCount}"/>
+                    <DataGridTextColumn Header="NSAF" Binding="{Binding Path=NSAF}"/>
+                    <DataGridTextColumn Header="Coverage" Binding="{Binding Path=Coverage}"/>
+                    <DataGridTextColumn Header="Protein Score" Binding="{Binding Path=ProteinScore}"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid AutoGenerateColumns="False" Grid.Row="3" HorizontalAlignment="Stretch" Name="dataGridPeptides" VerticalAlignment="Stretch" Background="AntiqueWhite" RowBackground="Azure"  AlternatingRowBackground="LightGoldenrodYellow" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows = "False" MouseDoubleClick="dataGridPeptides_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="FileWithScanNoAndCharge" Width="Auto" Binding="{Binding Path=FileNameWithScanNumberAndChargeState}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="Unique" Width="Auto" Binding="{Binding Path= IsUnique}"/>
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="MeasuredMH" Width="Auto" Binding="{Binding Path=MeasuredMH}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="TheoreticalMH" Width="Auto" Binding="{Binding Path=TheoreticalMH}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="PPM" Width="Auto" Binding="{Binding Path=PPM_Orbitrap}"/>
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="PrimaryScore" Width="Auto" Binding="{Binding Path=PrimaryScore}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="SecondaryScore" Width="Auto" Binding="{Binding Path= SecondaryScore}"/>
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="DeltaCN" Width="Auto" Binding="{Binding Path=DeltaCN}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="PeaksMatched" Width="Auto" Binding="{Binding Path=PeaksMatched}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="BayesianScore" Width="Auto" Binding="{Binding Path= BayesianScore}" />
+                    <DataGridTextColumn CanUserReorder="True" CanUserResize="True" CanUserSort="True" Header="PeptideSequence" Width="Auto" Binding="{Binding Path= PeptideSequence}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

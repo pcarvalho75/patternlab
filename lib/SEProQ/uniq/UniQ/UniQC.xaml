@@ -1,0 +1,136 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:BelaGraph="clr-namespace:BelaGraph;assembly=BelaGraph" x:Class="UniQ.UniQC"
+             mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="300" Background="#FFFAE803">
+    <Grid x:Name="Main" Background="WhiteSmoke">
+
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="25" MinHeight="25" Height="25"/>
+            <RowDefinition Height="300*"/>
+        </Grid.RowDefinitions>
+
+        <Menu x:Name="MenuMain" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="WhiteSmoke">
+            <MenuItem Header="File">
+                <MenuItem x:Name="MenuItemExportProteinResults" Header="Export Protein Result" IsEnabled="False" Click="MenuItemExportProteinResults_Click"/>
+                <MenuItem x:Name="MenuItemExporToPLP" Header="Export PatternLab Project File (.plp)" IsEnabled="False" Click="MenuItemExporToPLP_Click"/>
+                <MenuItem x:Name="MenuItemExporToXLS" Header="Export to Excel (.xls)" IsEnabled="False" Click="MenuItemExporToXLS_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <TabControl Loaded="TabControl_Loaded" Grid.Row="1" >
+
+            <TabItem x:Name="TabItemParameters" Header=" Parameters ">
+
+                <Grid x:Name="GridParameterSelection" Background="WhiteSmoke">
+                    <GroupBox Header="Input" Margin="10,26,10,0" VerticalAlignment="Top" Height="130">
+                        <Grid Background="WhiteSmoke">
+
+                            <Label Content="Peptide Quantitation Report" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0"/>
+                            <Button x:Name="ButtonBrowsePeptideQuantitationReport" Content="Browse" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Margin="0,44,10,0" Click="ButtonBrowsePeptideQuantitationReport_Click" Height="23"/>
+                            <TextBox x:Name="TextBoxQuantitationReport" Height="23" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="174,44,90,0" TextChanged="TextBoxQuantitationReport_TextChanged"/>
+                            <TextBox x:Name="TextBoxClassLabel" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Margin="174,13,0,0" TextChanged="TextBoxClassLabel_TextChanged"/>
+                            <Label Content="Class labels :" HorizontalAlignment="Left" Margin="94,10,0,0" VerticalAlignment="Top" Width="75"/>
+                            <Label Content="Markers label with -1 will be ignored" HorizontalAlignment="Left" Margin="377,11,0,0" VerticalAlignment="Top" Height="25" Width="250"/>
+
+                            <Label Content="Fold = Channel1/Channel2" HorizontalAlignment="Left" Margin="416,72,0,0" VerticalAlignment="Top" Height="29" Width="156"/>
+                        </Grid>
+                    </GroupBox>
+
+                    <Button x:Name="ButtonGo" Content="Go" Margin="10,182,10,0" VerticalAlignment="Top" IsEnabled="False" Click="ButtonGo_Click"/>
+                </Grid>
+
+            </TabItem>
+
+
+            <TabItem x:Name="TabItemResultBrowser" Header=" Result Browser ">
+                <Grid x:Name="Tab1" Background="WhiteSmoke">
+                    <Grid.RowDefinitions>
+                        <RowDefinition MaxHeight="33" MinHeight="33" Height="33"/>
+                        <RowDefinition MaxHeight="33" MinHeight="33" Height="33"/>
+                        <RowDefinition MaxHeight="33" MinHeight="33" Height="33"/>
+                        <RowDefinition Height="273*"/>
+                        <RowDefinition MaxHeight="25" MinHeight="25" Height="25"/>
+                        <RowDefinition Height="167*"/>
+                        
+                    </Grid.RowDefinitions>
+
+                    <WrapPanel x:Name="WrapPanelControl2" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Stretch" Background="WhiteSmoke">
+                        <WrapPanel.Resources>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="Margin" Value="50,0" />
+                            </Style>
+                            <Style TargetType="{x:Type CheckBox}">
+                                <Setter Property="Margin" Value="30,0" />
+                            </Style>
+                        </WrapPanel.Resources>
+                        
+                        <CheckBox x:Name="CheckBoxConsiderOnlyUniquePeptides" VerticalAlignment="Center" Content="Only unique peptides" Click="CheckBoxConsiderOnlyUniquePeptides_Click"/>
+                        <Label Content="Peptide Log Fold Change Cutoff" VerticalAlignment="Center"/>
+                        <xctk:DoubleUpDown x:Name="DoubleUpDownPeptideLogFold"  Minimum="0.00" Value="0.30" VerticalAlignment="Center" Increment="0.05" Width="50" FormatString="0.00" Maximum="20" ValueChanged="DoubleUpDownPeptideLogFold_ValueChanged"/>
+                        <Label Content="Peptide p-value Cutoff" VerticalAlignment="Center"/>
+                        <xctk:DoubleUpDown x:Name="DoubleUpDownPeptidePValueCutoff"  Minimum="0.01" Value="0.05" VerticalAlignment="Center" Increment="0.02" Width="50" FormatString="0.00" Maximum="1" ValueChanged="DoubleUpDownPeptidePValueCutoff_ValueChanged"/>
+                        <Label Content="No Peptides" VerticalAlignment="Center"/>
+                        <xctk:IntegerUpDown x:Name="IntegerUpDown" Minimum="1" Value="2" VerticalAlignment="Center" ValueChanged="IntegerUpDown_ValueChanged" />
+                        <Button x:Name="buttonUpdate" Content="Update" Width="75" Click="buttonUpdate_Click"/>
+                    </WrapPanel>
+
+                    <WrapPanel x:Name="WrapPanelControl1" Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Stretch" Background="WhiteSmoke">
+                        <Label Content="Total Peptides:" VerticalAlignment="Center" />
+                        <Label x:Name="LabelTotalPeptides" Content="?" VerticalAlignment="Center"/>
+                        <Label Content="Filtered SpecCount:" VerticalAlignment="Center" />
+                        <Label x:Name="LabelSpecCount" Content="?" VerticalAlignment="Center"/>
+                        <Label Content="Filtered Peptides: " VerticalAlignment="Center"/>
+                        <Label x:Name="LabelNoPeptides" Content="?" VerticalAlignment="Center"/>
+                        <Label Content="Filtered Proteins: " VerticalAlignment="Center"/>
+                        <Label x:Name="LabelNoProteins" Content="?" VerticalAlignment="Center"/>
+                    </WrapPanel>
+
+                    <WrapPanel Grid.Row="2" HorizontalAlignment="Center"  VerticalAlignment="Stretch" Background="WhiteSmoke">
+                        <Label Content="Avg Filtered Pep Fold:" VerticalAlignment="Center" />
+                        <Label x:Name="LabelAvgFilteredPepLogFold" Content="?" VerticalAlignment="Center"/>
+                        <Label Content="Corrected p-value for q =" VerticalAlignment="Center" />
+                        <xctk:DoubleUpDown x:Name="DoubleUpDownQValue"  Minimum="0.00" Value="0.01" VerticalAlignment="Center" Increment="0.01" Width="50" FormatString="0.00" Maximum="0.5" ValueChanged="DoubleUpDownQValue_ValueChanged"/>
+                        <Label Content=": " VerticalAlignment="Center" />
+                        <Label x:Name="LabelCorrectedP" Content="?" VerticalAlignment="Center" />
+                    </WrapPanel>
+
+                    <DataGrid x:Name="DataGridProteinView" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="WhiteSmoke" AlternatingRowBackground="WhiteSmoke" SelectionChanged="DataGridProteinView_SelectionChanged" AutoGeneratingColumn="DataGridProteinView_AutoGeneratingColumn" LoadingRow="DataGridProteinView_LoadingRow" />
+
+                    <DataGrid x:Name="DataGridPeptideView" AutoGenerateColumns="True" Grid.Row="5" HorizontalAlignment="Stretch"  AlternatingRowBackground="WhiteSmoke" MouseDoubleClick="DataGridPeptideView_MouseDoubleClick"/>
+                    <Label x:Name="LabelSelectedProtein" Grid.Row="4" Background="White" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                </Grid>
+                
+            </TabItem>
+
+            <TabItem x:Name="TabItemPeptideBrowser" Header=" Peptide Browser " MouseDoubleClick="TabItemPeptideBrowser_MouseDoubleClick">
+                <Grid Background="WhiteSmoke">
+                    <DataGrid x:Name="DataGridAllPeptidesView" HorizontalAlignment="Stretch" Background="WhiteSmoke"  AlternatingRowBackground="WhiteSmoke" LoadingRow="DataGridAllPeptidesView_LoadingRow" Margin="0,17,-0.4,0.2"/>
+                    <CheckBox x:Name="CHeckBoxShowPeptidesOfFilteredProteinsOnly" IsChecked="True" IsEnabled="False"  Content="Show peptides of filtered proteins only" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" Click="CHeckBoxShowPeptidesOfFilteredProteinsOnly_Click"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem x:Name="TabItemPeptideDistribution" Header=" Peptide Distribution ">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MaxHeight="33" MinHeight="33" Height="33"/>
+                        <RowDefinition Height="273*"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox x:Name="CheckBoxPlotFilteredPeptides" IsChecked="True" Grid.Row="0" Content="Plot Filtered Peptides" VerticalAlignment="Center" Click="CheckBoxPlotFilteredPeptides_Click" />
+                    <BelaGraph:BelaGraphControl Grid.Row="1" x:Name="BelaGraphPeptideDistribution" SizeChanged="BelaGraphPeptideDistribution_SizeChanged"></BelaGraph:BelaGraphControl>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+        <!--The wait window-->
+        <Border x:Name="WaitWindowWPF" BorderBrush="Black" BorderThickness="3"  Grid.RowSpan="2" Visibility="Collapsed" Background="#80000000">
+            <Grid>
+                <TextBlock Margin="0" Text="Please Wait..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="#7EFFFFFF"/>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</UserControl>

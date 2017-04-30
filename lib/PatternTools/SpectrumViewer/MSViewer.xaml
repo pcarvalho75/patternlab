@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="PatternTools.SpectrumViewer.MSViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Name ="BaseGrid" MinHeight="300" MinWidth="400">
+        <TabControl HorizontalAlignment="Stretch"  Name="tabControlViewer" VerticalAlignment="Stretch">
+            <TabItem Header="Spectrum View" Name="tabItemSpectrumView">
+                <Grid Name ="MyGrid" MinHeight="200" MinWidth="400">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" MaxHeight="70" MinHeight="70" />
+                        <RowDefinition />
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Name="Column0" Width="30"/>
+                        <ColumnDefinition Name="Column1" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1"  Grid.Row= "2" Content="M/Z" Name="label1" HorizontalAlignment="Center"/>
+                    <Label Name="LabelRelativeIntensity" Width ="100" Canvas.Left="10" Grid.Column="0"  Grid.Row= "1" VerticalAlignment="Center">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Label.LayoutTransform>
+                        <Label.Content>Relative Intensity</Label.Content>
+                    </Label>
+                    <Border BorderBrush="DarkBlue" Grid.Column="1" Grid.Row="1" BorderThickness="1" Name="CanvasBorder" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Canvas Background="Azure" Name="canvasMS" Grid.Column="1" Grid.Row="1" SizeChanged="canvasMS_SizeChanged" PreviewMouseLeftButtonDown="canvasMS_PreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="canvasMS_PreviewMouseLeftButtonUp" PreviewMouseRightButtonDown="canvasMS_PreviewMouseRightButtonDown"/>
+
+                    </Border>
+                    <Canvas Grid.Column="1" HorizontalAlignment="Stretch"  Name="canvasDenovo" VerticalAlignment="Stretch"/>
+                    <Label Content="ABC" Grid.ColumnSpan="2" Height="28" HorizontalAlignment="Left" Margin="6,2,0,0" Name="labelABC" VerticalAlignment="Top" />
+                    <Label Content="XYZ" Grid.ColumnSpan="2" Height="28" HorizontalAlignment="Left" Margin="6,27,0,0" Name="labelXYZ" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Spectrum Prediction Parameters">
+                <Grid Name="SpectrumPredictionParameters">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MaxWidth="145" MinWidth="145" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <DataGrid Background="Azure" AutoGenerateColumns="False" Grid.Column="1" HorizontalAlignment="Stretch"  Name="dataGridPeakViewer" VerticalAlignment="Stretch" RowBackground="Azure"  AlternatingRowBackground="LightBlue" Margin="0,35,0,0">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Charge" Binding="{Binding Path=Charge}"/>
+                            <DataGridTextColumn Header="m/z" Binding="{Binding Path=MZ}"/>
+                            <DataGridTextColumn Header="Series No" Binding="{Binding Path=Number}"/>
+                            <DataGridTextColumn Header="Series" Binding="{Binding Path=Series}"/>
+                            <DataGridTextColumn Header="AA" Binding="{Binding Path=FinalAA}"/>
+                            <DataGridTextColumn Header="Matched" Binding="{Binding Path=Matched}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <WrapPanel HorizontalAlignment ="Center"  Margin="5,5,5,5" Name="wrapPanelNeutralLoss" VerticalAlignment="Stretch" Width="145">
+                        <Label Content="Sequence:" Height="23" Name="label2" Width="65">
+                            <Label.BindingGroup>
+                                <BindingGroup Name="SequenceSearch" />
+                            </Label.BindingGroup>
+                        </Label>
+                        <TextBox Height="23" Name="textBoxSequence" Width="56">
+                            <TextBox.BindingGroup>
+                                <BindingGroup Name="SequenceSearch" />
+                            </TextBox.BindingGroup>
+                        </TextBox>
+                        <GroupBox Header="Ion Series" Name="groupBoxIonSeries" Width="135" Margin ="5,2,5,5" HorizontalAlignment="Center">
+                            <Grid>
+                                <WrapPanel HorizontalAlignment="center"  Name="wrapPanel1" VerticalAlignment="Stretch">
+                                    <CheckBox Content="A" Height="16" Margin="5,5,5,5" Name="checkBoxA" IsThreeState="False" Foreground="Red" />
+                                    <CheckBox Content="B" Height="16" Margin="5,5,5,5" Name="checkBoxB" IsThreeState="False" Foreground="Red" Checked="checkBoxB_Checked" />
+                                    <CheckBox Content="C" Height="16" Margin="5,5,5,5" Name="checkBoxC" IsThreeState="False" Foreground="Red" />
+                                    <CheckBox Content="X" Height="16" Margin="5,5,5,5" Name="checkBoxX" IsThreeState="False" Foreground="Blue" />
+                                    <CheckBox Content="Y" Height="16" Margin="5,5,5,5" Name="checkBoxY" IsThreeState="False" Foreground="Blue" />
+                                    <CheckBox Content="Z" Height="16" Margin="5,5,5,5" Name="checkBoxZ" IsThreeState="False" Foreground="Blue" />
+                                </WrapPanel>
+                            </Grid>
+                        </GroupBox>
+                        <GroupBox Header="Neutral Loss" Height="70" Name="groupBoxNeutralLoss" Margin ="5,2,5,5" Width="135">
+                            <Grid>
+                                <StackPanel HorizontalAlignment="Stretch"  Margin="0,0,0,0" Name="stackPanelNeutralLoss" VerticalAlignment="Stretch">
+                                    <CheckBox Content="H2O" Height="16" Margin ="2,2,2,2" Name="checkBoxNLH2O" IsThreeState="False" Foreground="Green" />
+                                    <CheckBox Content="NH3" Height="16" Margin ="2,2,2,2" Name="checkBoxNLNH3" IsThreeState="False" Foreground="Green" />
+                                </StackPanel>
+                            </Grid>
+                        </GroupBox>
+                        <CheckBox Content="+1" Margin ="10,2,5,5" Height="16" Name="checkBoxZ1" IsChecked="True" />
+                        <CheckBox Content="+2" Margin ="5,2,5,5" Height="16" Name="checkBoxZ2" />
+                        <CheckBox Content="+3" Margin ="5,2,5,5" Height="16" Name="checkBoxZ3" />
+                        <CheckBox Content="Monoisotopic      " Height="16" Name="checkBoxIsMonoisotopic" Margin="10,2,5,5" IsChecked="True" />
+                        <Label Content="PPM : " Height="28" Name="label4" />
+                        <TextBox Height="23" Name="textBoxPPM" Width="71" Text="600" />
+                        <Button Content="CID" Margin ="5,2,5,5" Name="buttonCID" Width="50" Click="buttonCID_Click" />
+                        <Button Content="Plot" Name="buttonPlot" Margin="5,2,5,5" Width="50" Click="buttonPlot_Click" />
+                    </WrapPanel>
+                    <Label Content="Produced peak statistics: " Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label5" VerticalAlignment="Top" />
+                    <Label Content="?" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="146,6,0,0" Name="labelPeaksProduced" VerticalAlignment="Top" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Spectrum Plotting Parameters" Margin="1,-2,-5,0">
+                <Grid Name="gridSpectrumPlotingParameters" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Label Content="Relative Intensity Threshold: " Height="28" HorizontalAlignment="Left" Margin="6,18,0,0" Name="label6" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="173,20,0,0" Name="textBoxRelativeIntensityThreshold" VerticalAlignment="Top" Width="48" Text="0.005" />
+                    <GroupBox Header="Save Spectrum Image" Height="100" HorizontalAlignment="Left" Margin="21,52,0,0" Name="groupBox1" VerticalAlignment="Top" Width="200">
+                        <Grid>
+                            <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="23,48,0,0" Name="buttonSaveImage" VerticalAlignment="Top" Width="133" Click="buttonSaveImage_Click" />
+                            <TextBox Height="23" HorizontalAlignment="Left" Margin="115,19,0,0" Name="textBoxImageScale" VerticalAlignment="Top" Width="41" Text="1.5" />
+                            <Label Content="Image Scale" Height="28" HorizontalAlignment="Left" Margin="23,17,0,0" Name="label3" VerticalAlignment="Top" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Spectrum Peaks" Margin="238,18,3,22" Name="groupBoxSpectrumPeaks">
+                        <Grid>
+                            <TextBox  HorizontalAlignment="Stretch"  Margin="0,0,0,0" Name="textBoxSpectrumPeaks" VerticalAlignment="Stretch" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</UserControl>

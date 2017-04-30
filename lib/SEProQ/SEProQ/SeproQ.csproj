@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F58C1F2E-7711-4B1B-894E-3331851135F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SEProQ</RootNamespace>
+    <AssemblyName>SEProQ</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://pcarvalho.com/patternlab/downloads/windows/seproq/</UpdateUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>SEProQ</ProductName>
+    <PublisherName>Pattern Lab for Proteomics</PublisherName>
+    <SuiteName>SEPro</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.html</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>61</ApplicationRevision>
+    <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0A0956F49CAA9CDE0FEF43D0D8A96B15D329395F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SeproQ_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alglibnet2">
+      <HintPath>..\..\PatternTools\dependencies\alglibnet2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acetylation\AcetylationParams.cs" />
+    <Compile Include="Acetylation\AcetylationQuant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Acetylation\AcetylationQuant.Designer.cs">
+      <DependentUpon>AcetylationQuant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Acetylation\MyData.cs" />
+    <Compile Include="Acetylation\ReportItem.cs" />
+    <Compile Include="Acetylation\ReverseLabelCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Acetylation\ReverseLabelCheck.Designer.cs">
+      <DependentUpon>ReverseLabelCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterSettings.cs" />
+    <Compile Include="IsobaricQuant\IsobaricControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IsobaricQuant\IsobaricControl.Designer.cs">
+      <DependentUpon>IsobaricControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsobaricQuant\IsobaricImpurityCorrection.cs" />
+    <Compile Include="IsobaricQuant\Multinotch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IsobaricQuant\Multinotch.Designer.cs">
+      <DependentUpon>Multinotch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsobaricQuant\MultiNotchMS3Item.cs" />
+    <Compile Include="IsobaricQuant\PairWiseComparison\PepQuant.cs" />
+    <Compile Include="IsobaricQuant\PairWiseComparison\ProtQuant.cs" />
+    <Compile Include="IsobaricQuant\PairWiseComparison\Utils.cs" />
+    <Compile Include="IsobaricQuant\PepQuant.cs" />
+    <Compile Include="IsobaricQuant\ProtQuant.cs" />
+    <Compile Include="IsobaricQuant\YadaMultiplexCorrection\YMC.cs" />
+    <Compile Include="MassDistributionViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MassDistributionViewer.Designer.cs">
+      <DependentUpon>MassDistributionViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acetylation\AcetylationQuant.resx">
+      <DependentUpon>AcetylationQuant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acetylation\ReverseLabelCheck.resx">
+      <DependentUpon>ReverseLabelCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsobaricQuant\IsobaricControl.resx">
+      <DependentUpon>IsobaricControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsobaricQuant\Multinotch.resx">
+      <DependentUpon>Multinotch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MassDistributionViewer.resx">
+      <DependentUpon>MassDistributionViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PatternTools\PatternTools.csproj">
+      <Project>{6d69c8a1-9d73-4e86-956f-bbf3392496c9}</Project>
+      <Name>PatternTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PepExplorer\PepExplorer2\PepExplorer.csproj">
+      <Project>{8fbb754c-2c0a-4523-80cd-d3bb45b097f5}</Project>
+      <Name>PepExplorer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PLP\PLP.csproj">
+      <Project>{08c2b4d7-20dd-4c42-8f27-c9a42afe499d}</Project>
+      <Name>PLP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RawReader\RawReader\RawReader.csproj">
+      <Project>{ab6e08a7-d4b8-48ab-87ff-7202dffc2983}</Project>
+      <Name>RawReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SEPRPackage\SEPRPackage.csproj">
+      <Project>{7e2ab1fb-3420-41d3-9028-6aa4bae3da90}</Project>
+      <Name>SEPRPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XQuant\XQuant\XQuant.csproj">
+      <Project>{cef43e44-a86c-496e-99fb-af148c7988ef}</Project>
+      <Name>XQuant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\uniq\UniQ\UniQ.csproj">
+      <Project>{0d037bce-24b9-4c77-ba40-bda077a0a0cf}</Project>
+      <Name>UniQ</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

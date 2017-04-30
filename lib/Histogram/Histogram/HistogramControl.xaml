@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Histogram.HistogramControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:Histogram"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="900">
+    <Grid>
+        <local:HistogramPlot x:Name="MyHistogramPlot" Margin="10,49,210,10"/>
+        <WrapPanel Height="39" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <Label Content="No bins: "/>
+            <xctk:IntegerUpDown x:Name="IntegerUpDownNoBins" Minimum="2" Maximum="100" Value="30" Height="21" Increment="1"/>
+            <Label Content="X Min: "/>
+            <xctk:DoubleUpDown x:Name="DoubleUpDownXMin" Maximum="1000000000" Value="-1" Height="21" Increment="1"/>
+            <Label Content="X Max: "/>
+            <xctk:DoubleUpDown x:Name="DoubleUpDownXMax" Minimum="-1" Maximum="1000000000" Value="-1" Height="21" Increment="1"/>
+            <Label Content="Y Max: "/>
+            <xctk:DoubleUpDown x:Name="DoubleUpDownYMax" Minimum="-1" Maximum="1000000000" Value="-1" Height="21" Increment="1"/>
+            <CheckBox x:Name="CheckBoxLogData" Margin="5,5,5,5" Content="Log" />
+            <Label Content="Title: "/>
+            <TextBox x:Name="TextBoxTitle" Width="50" />
+            <Label Content="X-Title: "/>
+            <TextBox x:Name="TextBoxXAxis" Width="50" />
+            <Label Content="Y-Title: "/>
+            <TextBox x:Name="TextBoxYAxis" Width="50" />
+            <Button x:Name="ButtonClear" Content="Clear" Margin="5,5,5,5" Width="50" Height="21" RenderTransformOrigin="0.504,0.5" Click="ButtonClear_Click" />
+            <Button x:Name="ButtonBinData" Content="Bin Data" Margin="5,5,5,5" Width="50" Height="21" RenderTransformOrigin="0.504,0.5" Click="ButtonBinData_Click"/>
+            
+        </WrapPanel>
+
+        <GroupBox x:Name="groupBox" Header="Input" Margin="0,49,10,10" HorizontalAlignment="Right" Width="195" >
+            <TextBox x:Name="TextBoxInput" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" AcceptsReturn="True" />
+        </GroupBox>
+    </Grid>
+</UserControl>

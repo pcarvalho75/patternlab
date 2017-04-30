@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendQuest", "TrendQuest.csproj", "{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Debug|x64.ActiveCfg = Debug|x64
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Debug|x64.Build.0 = Debug|x64
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Release|x64.ActiveCfg = Release|x64
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Release|x64.Build.0 = Release|x64
+		{D1601F5F-5A79-4E7E-B7B8-64498F5EE95C}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

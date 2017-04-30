@@ -1,0 +1,18 @@
+﻿<Window x:Class="NextProt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NextProt"
+        mc:Ignorable="d"
+        Title="NextProt ChromossomeBrowser" Height="700" Width="900">
+    <Grid>
+
+        <Button Content="Update NextProt Data" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="155" Click="Button_Click"/>
+        <local:ChromossomeBrowser x:Name="ChromossomeBrowser1" Margin="0,56,0.333,-0.333"/>
+        <Button Content="Load SEPro File" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="145" Click="Button_Click_1"/>
+        <Button x:Name="ButtonParseInput" Content="Parse input" HorizontalAlignment="Left" Margin="320,10,0,0" VerticalAlignment="Top" Width="125" Click="ButtonParseInput_Click"/>
+
+    </Grid>
+    
+</Window>

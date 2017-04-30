@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="SEProcessor.Result.SpecBrowserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="700" xmlns:my="clr-namespace:PatternTools.SpectrumViewer;assembly=patternTools">
+    <Grid Background="Bisque">
+        <my:MSViewer HorizontalAlignment ="Stretch"  Grid.Row="0" Margin="10,10,10,10" VerticalAlignment="Stretch" Name="mSViewer1" Loaded="mSViewer1_Loaded" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,161 @@
+﻿<Window x:Class="PatternLabWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatternLabWPF"
+        mc:Ignorable="d"
+        Title="PatternLab for proteomics" Height="600" Width="800">
+    <Grid x:Name="GridPatternLab">
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="25" MinHeight="25" Height="25"/>
+            <RowDefinition MaxHeight="25" MinHeight="25" Height="25"/>
+            <RowDefinition Height="300*"/>
+        </Grid.RowDefinitions>
+
+        <Menu x:Name="menu" IsMainMenu="True" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Honeydew">
+            <MenuItem x:Name="generateSearchDBToolStripMenuItem" Header="_Generate Search DB" Click="generateSearchDBToolStripMenuItem_Click"></MenuItem>
+            <MenuItem Header="_Search (Comet PSM)" />
+            <MenuItem Header="_Filter">
+                <MenuItem x:Name="sEProRegrouperToolStripMenuItem" Header="_Search Engine Processor (SEPro - for PSMs)" Click="sEProRegrouperToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="LibWPF/SEPro/Images/SQTProcessorLogoForIcon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="pepExplorerforDeNovoSequencingToolStripMenuItem" Header="_PepExplorer (for de novo sequencing)" Click="pepExplorerforDeNovoSequencingToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="LibWPF/PepExplorer/Images/PexLogo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+            </MenuItem>
+            <MenuItem x:Name="parseToolStripMenuItem" Header="_Project Organization" Click="parseToolStripMenuItem_Click" />
+            <MenuItem Header="_Select">
+                <MenuItem x:Name="aCFoldToolStripMenuItem" Header="_ACFold" Click="aCFoldToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="LibWPF/PepExplorer/Images/PexLogo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="tFoldToolStripMenuItem" Header="_TFold" Click="tFoldToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="LibWPF/PepExplorer/Images/PexLogo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="anovaToolStripMenuItem" Header="_ANova" Click="anovaToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/FYellow.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+            </MenuItem>
+            <MenuItem Header="_Analyze">
+                <MenuItem x:Name="buziosToolStripMenuItem" Header="_Buzio" Click="buziosToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/AYellow.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="_TrendQuest">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/FYellow.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="gOExGeneOntologyExplorerToolStripMenuItem" Header="_GOEx (Gene Ontology Explorer)" Click="gOExGeneOntologyExplorerToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/FYellow.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="proportionalVennDiagramToolStripMenuItem" Header="_Approximately area-proportional Venn Diagram" Click="proportionalVennDiagramToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/FYellow.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+            </MenuItem>
+            <MenuItem Header="_Quant">
+                <MenuItem x:Name="xICBrowserToolStripMenuItem" Header="_XIC Browser" Click="xICBrowserToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/xicBrowser.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="isobaricAnalyzerToolStripMenuItem" Header="_Isobaric Analyzer" Click="isobaricAnalyzerToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/isobaricBrowser.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="_Utils">
+                <MenuItem Header="_Index Sparse Matrix Legacy">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/UTILSindexSparseMatrix.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_Histogram tool">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/UTILHistogram.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_Mass spectra file browser">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/UTILMassSpectraFile.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="rawReaderToolStripMenuItem" Header="_RawReader" Click="rawReaderToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/UTILRawReader.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_XD Scoring (Phosphosite)">
+                    <MenuItem.Icon>
+                        <Image Source="Images/Button/UTILXDScoring.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem x:Name="aboutToolStripMenuItem" Header="_About" Click="aboutToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/logoIcon48x48.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem x:Name="checkForUpdateToolStripMenuItem" Header="_Check for Update" Click="checkForUpdateToolStripMenuItem_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Images/update.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_Troubleshooting and user forum">
+                    <MenuItem.Icon>
+                        <Image Source="Images/interrogation_icon.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="_What is new ?">
+                    <MenuItem.Icon>
+                        <Image Source="Images/new.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Label x:Name="labelBreadCrumb" Content=".: Welcome" Background="Honeydew" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" FontWeight="Bold"/>
+
+        <Grid x:Name="GridContent" Grid.Row="2" />
+
+        <WindowsFormsHost VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2">
+       
+        </WindowsFormsHost>
+        
+        </Grid>
+</Window>

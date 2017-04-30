@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9B44675-E183-4ABA-A18E-5FDC6F31E160}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PatternLabWPF</RootNamespace>
+    <AssemblyName>PatternLabWPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Images\buttons\button.psd" />
+    <None Include="Images\buttons\small.psd" />
+    <None Include="Images\buttons\small_new.pdn" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Wpf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LibWPF\PepExplorer\Images\PexLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="LibWPF\SEPro\Images\SQTProcessorLogoForIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ACFold\parserGUI\XFold.csproj">
+      <Project>{31dbb047-5693-49fc-8015-dbc9868b359b}</Project>
+      <Name>XFold</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Anova\Anova.csproj">
+      <Project>{e6bda195-1905-4154-bce1-e12b2831521f}</Project>
+      <Name>Anova</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BelaGraph\BelaGraph.csproj">
+      <Project>{ef3ee654-49b2-4181-b0a9-e3d2b8b4f2d7}</Project>
+      <Name>BelaGraph</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Buzios\ProteomicsCluster\Buzios.csproj">
+      <Project>{96e80bc4-c3dc-4512-8523-edf248bd03c8}</Project>
+      <Name>Buzios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommetWrapper\CommetWrapper\CometWrapper.csproj">
+      <Project>{c67a6460-34cf-475f-b79b-1539753216ed}</Project>
+      <Name>CometWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GO\GO\GO.csproj">
+      <Project>{c50bd19b-b6d8-4fb1-9dcd-6a49ed221f67}</Project>
+      <Name>GO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HMMVerifier\HMMVerifier.csproj">
+      <Project>{43579599-3389-4683-b6d2-b5692355e8e4}</Project>
+      <Name>HMMVerifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MAligner\Aligner.csproj">
+      <Project>{add66846-34b8-496c-8988-d550564013db}</Project>
+      <Name>Aligner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MicroChart\MicroChart.csproj">
+      <Project>{a33ec971-3f9e-47ab-aad0-4f1fa8312786}</Project>
+      <Name>MicroChart</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NCBIExtractor\NCBIExtractor.csproj">
+      <Project>{79c8df6e-9c97-4098-ab81-c4152070c52e}</Project>
+      <Name>NCBIExtractor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PatternTools\PatternTools.csproj">
+      <Project>{6d69c8a1-9d73-4e86-956f-bbf3392496c9}</Project>
+      <Name>PatternTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PepExplorer\GraphLib\GraphLib.csproj">
+      <Project>{f8bba067-2fb5-45e2-b0ff-66c4cb3f4cb4}</Project>
+      <Name>GraphLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PepExplorer\PepExplorer2\PepExplorer.csproj">
+      <Project>{8fbb754c-2c0a-4523-80cd-d3bb45b097f5}</Project>
+      <Name>PepExplorer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PepExplorer\ProteinCoverageViewer\ProteinCoverageViewer.csproj">
+      <Project>{1883c8fa-8778-41fb-955c-1267fe9dd5fb}</Project>
+      <Name>ProteinCoverageViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PeptideAnotation\PeptideAnotation.csproj">
+      <Project>{1207c110-0d29-4cf4-ab25-97b7e983efea}</Project>
+      <Name>PeptideAnotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PLP\PLP.csproj">
+      <Project>{08c2b4d7-20dd-4c42-8f27-c9a42afe499d}</Project>
+      <Name>PLP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RawReader\RawReader\RawReader.csproj">
+      <Project>{ab6e08a7-d4b8-48ab-87ff-7202dffc2983}</Project>
+      <Name>RawReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RbfClassifier\RbfClassifier.csproj">
+      <Project>{4ee435f4-c779-4c3a-8f76-b8f5ca2c955d}</Project>
+      <Name>RbfClassifier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Regrouper\Regrouper.csproj">
+      <Project>{3faee333-5176-440b-8953-1d2d63cdc9ef}</Project>
+      <Name>Regrouper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SEProQ\SEProQ\SeproQ.csproj">
+      <Project>{f58c1f2e-7711-4b1b-894e-3331851135f8}</Project>
+      <Name>SeproQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SEProQ\uniq\UniQ\UniQ.csproj">
+      <Project>{0d037bce-24b9-4c77-ba40-bda077a0a0cf}</Project>
+      <Name>UniQ</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SEPro\SEProcessor.csproj">
+      <Project>{b57cbb49-0570-4468-8bc0-60e8465f6305}</Project>
+      <Name>SEProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SEPRPackage\SEPRPackage.csproj">
+      <Project>{7e2ab1fb-3420-41d3-9028-6aa4bae3da90}</Project>
+      <Name>SEPRPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TrendQuest\TrendFinder\TrendFinder\TrendQuest.csproj">
+      <Project>{d1601f5f-5a79-4e7e-b7b8-64498f5ee95c}</Project>
+      <Name>TrendQuest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Venn\Venn\Venn.csproj">
+      <Project>{f5d744da-a1bc-4a39-815a-5eef7c8b4270}</Project>
+      <Name>Venn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XDScore\XDScore\XDScore.csproj">
+      <Project>{bd9e90e6-9226-4a11-af5d-48256cb082bf}</Project>
+      <Name>XDScore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\XQuant\XQuant\XQuant.csproj">
+      <Project>{cef43e44-a86c-496e-99fb-af148c7988ef}</Project>
+      <Name>XQuant</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\book.png" />
+    <Resource Include="Images\exclamation.png" />
+    <Resource Include="Images\exclamationBWsmall.png" />
+    <Resource Include="Images\exclamationSmall.png" />
+    <Resource Include="Images\interrogation_icon.png" />
+    <Resource Include="Images\logoIcon48x48.ico" />
+    <Resource Include="Images\new.png" />
+    <Resource Include="Images\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttons\Ablue.png" />
+    <Resource Include="Images\buttons\AGreen.png" />
+    <Resource Include="Images\buttons\APurple.png" />
+    <Resource Include="Images\buttons\AYellow.png" />
+    <Resource Include="Images\buttons\blue.png" />
+    <Resource Include="Images\buttons\FBlue.png" />
+    <Resource Include="Images\buttons\FGreen.png" />
+    <Resource Include="Images\buttons\FGrey.png" />
+    <Resource Include="Images\buttons\FPurple.png" />
+    <Resource Include="Images\buttons\FRed.png" />
+    <Resource Include="Images\buttons\FYellow.png" />
+    <Resource Include="Images\buttons\gray.png" />
+    <Resource Include="Images\buttons\green.png" />
+    <Resource Include="Images\buttons\isobaricBrowser.png" />
+    <Resource Include="Images\buttons\PBlue.png" />
+    <Resource Include="Images\buttons\PGreen.png" />
+    <Resource Include="Images\buttons\Ppurple.png" />
+    <Resource Include="Images\buttons\purple.png" />
+    <Resource Include="Images\buttons\PYellow.png" />
+    <Resource Include="Images\buttons\red.png" />
+    <Resource Include="Images\buttons\UTILHistogram.png" />
+    <Resource Include="Images\buttons\UTILMassSpectraFile.png" />
+    <Resource Include="Images\buttons\UTILRawReader.png" />
+    <Resource Include="Images\buttons\UTILSindexSparseMatrix.png" />
+    <Resource Include="Images\buttons\UTILXDScoring.png" />
+    <Resource Include="Images\buttons\xicBrowser.png" />
+    <Resource Include="Images\buttons\yellow.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

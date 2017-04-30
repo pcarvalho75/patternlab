@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.4" />
+  <Class Name="patternTools.dotGraph">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>dotGraph.cs</FileName>
+      <HashCode>AAAAAEEAQCBBIAEAAAaBAAgCAAAAEBAEAgQAAQAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Struct Name="patternTools.dotGraph.feature" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>dotGraph.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+  </Class>
+  <Class Name="patternTools.pTools">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>pTools.cs</FileName>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAgAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

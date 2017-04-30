@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpectrumViewer2", "SpectrumViewer2\SpectrumViewer2.csproj", "{737F9E99-FAB5-4928-A881-9D8E7EFC0399}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatternTools", "..\PatternTools\PatternTools.csproj", "{6D69C8A1-9D73-4E86-956F-BBF3392496C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeptideAnotation", "..\PeptideAnotation\PeptideAnotation.csproj", "{1207C110-0D29-4CF4-AB25-97B7E983EFEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Debug|x64.Build.0 = Debug|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Debug|x86.Build.0 = Debug|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Release|x64.ActiveCfg = Release|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Release|x64.Build.0 = Release|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Release|x86.ActiveCfg = Release|Any CPU
+		{737F9E99-FAB5-4928-A881-9D8E7EFC0399}.Release|x86.Build.0 = Release|Any CPU
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Debug|x64.ActiveCfg = Debug|x64
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Debug|x64.Build.0 = Debug|x64
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Debug|x86.ActiveCfg = Debug|x86
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Debug|x86.Build.0 = Debug|x86
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Release|x64.ActiveCfg = Release|x64
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Release|x64.Build.0 = Release|x64
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Release|x86.ActiveCfg = Release|x86
+		{6D69C8A1-9D73-4E86-956F-BBF3392496C9}.Release|x86.Build.0 = Release|x86
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Debug|x64.Build.0 = Debug|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Debug|x86.Build.0 = Debug|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Release|x64.ActiveCfg = Release|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Release|x64.Build.0 = Release|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Release|x86.ActiveCfg = Release|Any CPU
+		{1207C110-0D29-4CF4-AB25-97B7E983EFEA}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://proteomics.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = ..\\PatternTools\\PatternTools.csproj
+		SccProjectName0 = ../PatternTools
+		SccAuxPath0 = https://proteomics.visualstudio.com/defaultcollection
+		SccLocalPath0 = ..\\PatternTools
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\PeptideAnotation\\PeptideAnotation.csproj
+		SccProjectName1 = ../PeptideAnotation
+		SccAuxPath1 = https://proteomics.visualstudio.com/defaultcollection
+		SccLocalPath1 = ..\\PeptideAnotation
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

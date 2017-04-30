@@ -1,0 +1,15 @@
+﻿<Window x:Class="XICViewerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XICViewerWPF"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="XIC Viewer" Height="600" Width="900">
+    <Grid>
+        <Button x:Name="buttonPlotExample" Content="Plot Example" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="buttonPlotExample_Click"/>
+        <local:XICViewControl x:Name="MyXICView" Margin="10,34,9.6,10.4"/>
+
+    </Grid>
+</Window>

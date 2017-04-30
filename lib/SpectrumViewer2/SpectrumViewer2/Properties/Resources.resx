@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExampleSpectrum" xml:space="preserve">
+    <value>104.68946	319.8
+127.05116	2069
+127.08686	1971.6
+128.58667	342.2
+129.1031	751.1
+130.08827	473.8
+131.44409	284.9
+136.07626	1187.1
+141.06618	420
+144.07777	508.6
+145.06119	567.6
+147.1134	818.6
+155.04578	2078
+155.08215	1750.7
+155.11943	386.6
+167.11794	358.4
+172.07253	12209.6
+173.07686	593
+173.12885	1057.8
+175.07339	803.3
+175.12042	371.9
+195.11345	660.4
+197.05629	417.3
+198.08815	1574.1
+201.12421	7637.4
+202.129	682.9
+213.1243	593.4
+213.16339	382.5
+214.08263	801.4
+215.1152	2074.2
+217.08008	321.6
+217.54337	334.4
+224.06667	349.5
+226.15602	1050.4
+228.09828	969.6
+229.11934	1218.7
+230.07788	3394
+231.08012	269.7
+240.13542	1418.5
+242.0779	1244.5
+242.11395	647.1
+243.13336	356.7
+244.16676	6755.6
+245.17177	579.2
+246.10951	1103.9
+252.06265	1862.1
+252.13528	834.6
+258.14648	657.8
+259.10504	920.9
+269.08942	4134.6
+270.07321	7792.8
+270.14749	652.1
+271.07812	757.3
+273.6087	759.9
+275.59793	364.7
+281.11145	399.7
+287.09979	41614.5
+288.10275	4502.7
+289.10196	475.9
+297.12021	715.5
+298.14163	1518.6
+299.10059	429.9
+299.13712	1063.9
+299.17178	564.8
+311.09885	1221.9
+315.13071	2951.4
+316.1532	2860.9
+317.16055	480.6
+318.18369	352.2
+323.20871	3060
+324.21332	475.6
+325.15213	339.6
+327.16818	1593
+329.11072	2460.7
+333.14169	1870.9
+337.15201	3336.9
+339.09348	1041.9
+341.15076	742.1
+341.21985	25103.6
+342.22287	4616.4
+343.15335	643.3
+345.17883	949.7
+348.13235	307.4
+351.58752	332.2
+354.17996	1794.4
+355.1622	5275.2
+356.12204	1155
+356.16428	592.7
+357.10236	545.9
+366.13187	1522.5
+367.13318	426.6
+368.19559	373
+369.17685	382.8
+372.18945	4266.7
+373.19418	846
+374.13226	3393.4
+379.1658	378.5
+380.22873	614.2
+382.172	416.9
+383.15744	692.7
+386.20181	1026.9
+396.18936	1504.7
+397.20673	315.4
+398.13766	448.5
+398.24136	16328
+399.24457	3097.8
+400.1839	2323.8
+406.89203	368.9
+409.10132	519.5
+412.18408	429.6
+414.20056	3611.5
+415.20016	545.2
+424.18509	1463.7
+426.12869	1902.4
+426.20969	369.7
+428.21521	514.4
+430.19144	477.7
+432.21094	1280.7
+440.25684	593.4
+442.19717	2473
+443.1839	444.2
+451.22314	643.3
+452.18323	1514.4
+454.23242	658.5
+458.26508	722.9
+459.22275	823
+461.16406	1063.6
+465.20346	838.5
+467.26517	586.8
+469.20813	925.8
+470.18707	1290.1
+479.21445	1024.3
+485.2742	8654.4
+486.27615	2065.3
+487.22049	1852.1
+488.20676	296.9
+489.24878	862.9
+492.17303	392.7
+500.1748	384.2
+507.25958	517.6
+509.27441	549.8
+511.20901	430.8
+517.30438	534.7
+522.22113	476
+524.28467	1441
+525.29962	344.1
+527.28436	1533
+528.29578	377.9
+529.23254	671.9
+542.29602	22690.3
+543.29944	5897.3
+544.29382	822.2
+545.29803	1394.1
+550.28326	755.2
+555.27954	506
+578.28406	964.6
+596.23969	431.3
+601.25092	332.1
+614.30316	520.4
+619.22601	545.6
+623.35742	501.1
+635.30359	365.8
+641.36469	8065.1
+642.3728	2393.7
+643.3858	353.2
+648.26208	511.5
+660.31812	680.7
+664.30255	396.1
+683.57452	400.1
+696.29395	481.1
+697.28888	692
+704.33032	667.7
+714.30267	1201.3
+718.34967	403.7
+729.36365	455
+732.31519	490.1
+736.34381	394.5
+747.35687	546.6
+761.34473	438.9
+779.37128	452.3
+780.34967	331.4
+804.42828	8237.3
+805.43408	3026.3
+806.44305	621.7
+813.36694	637.9
+823.38892	523.2
+892.41046	510.5
+904.44598	452.6
+910.42328	610.6
+919.45648	4285
+920.45782	2364.6
+921.46423	670.7
+975.9361	339.4
+976.44714	550.9
+988.47357	1005
+989.47559	423
+991.47345	358.5
+1006.49036	11446.6
+1007.49286	6521.9
+1008.49255	1826.3
+1009.50842	487.2
+1052.64709	415
+1101.56506	507.1
+1102.56165	507.7
+1115.50574	356.7
+1119.57373	11008.1
+1120.57666	6337.3
+1121.57935	1913.7
+1122.57495	375.9
+1141.62146	316
+1218.64636	4175.8
+1219.64893	2400.6
+1220.65356	730.8
+1301.71692	394.2
+1319.68237	1837.1
+1320.70142	1508.7
+1358.72461	595.1
+1376.71411	3352.9
+1377.71973	2522.8
+1378.70972	877
+1445.72852	676.1
+1446.76917	456
+1463.74084	3063.6
+1464.74927	2469.5
+1465.7262	889.4
+1514.77161	480.5
+1515.79749	496.8
+1532.76746	1021.2
+1533.77075	998.1
+1550.78198	4837.7
+1551.77698	4156
+1552.79211	1717.9
+1553.76819	498.6</value>
+    <comment>GNDISSGTVLSDYVGSGPPK</comment>
+  </data>
+</root>

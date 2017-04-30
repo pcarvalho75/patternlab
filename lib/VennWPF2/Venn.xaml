@@ -1,0 +1,81 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VennWPF2"
+             xmlns:BelaGraph="clr-namespace:BelaGraph;assembly=BelaGraph" x:Class="VennWPF2.Venn"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid x:Name="GridMain">
+        <Grid>
+
+            <xctk:DoubleUpDown x:Name="DoubleUpDownScaleFactor"  Minimum="1" Value="2.5" VerticalAlignment="Top" Increment="0.1" FormatString="0.00" Maximum="20" Margin="94,70,0,0" HorizontalAlignment="Left" Width="111"/>
+            <xctk:DoubleUpDown x:Name="DoubleUpDownTransparency"  Minimum="0.1" Value="0.40" VerticalAlignment="Top" Increment="0.05" FormatString="0.00" Maximum="1" Margin="94,99,0,0" HorizontalAlignment="Left" Width="111"/>
+
+            <Button Content="Load PatternLab project" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="195" Click="Button_Click"/>
+            <Label Content="Title" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TextBoxTitle" HorizontalAlignment="Left" Margin="48,40,0,0" VerticalAlignment="Top" Width="157"/>
+            <Label Content="Scale Factor: " HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
+            <Label Content="Transparency: " HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top"/>
+
+
+            <GroupBox Header="Filtering options" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="195" Height="171">
+                <Grid>
+                    <xctk:DoubleUpDown x:Name="IntegerUpDownMinNoReplicates"  Minimum="1" Value="1" VerticalAlignment="Top" Increment="1" FormatString="0" Maximum="20" Margin="115,4,0,0" HorizontalAlignment="Left" Width="68" Height="22"/>
+                    <RadioButton x:Name="RadioButtonMinNoReplicates" Content="Min no replicates" IsChecked="True" HorizontalAlignment="Left" Margin="1,6,0,0" VerticalAlignment="Top"/>
+                    <GroupBox Header="GroupBox" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="163" Height="73">
+                        <Grid>
+                            <RadioButton x:Name="RadioButtonPerClass" IsChecked="True" Content="Per Class" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" RenderTransformOrigin="0.122,-2.773"/>
+                            <RadioButton x:Name="RadioButtonAllClasses" Content="All Classes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" RenderTransformOrigin="0.586,-2.091"/>
+                        </Grid>
+                    </GroupBox>
+                    <Label Content="or" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="64,99,0,0"/>
+                    <RadioButton x:Name="RadioButtonFilteringProbability" Content="Probability" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
+                    <xctk:DoubleUpDown x:Name="DoubleUpDownProbability"  Minimum="0.01" Value="0.05" VerticalAlignment="Top" Increment="0.01" FormatString="0.00" Maximum="1" Margin="99,121,0,0" HorizontalAlignment="Left" Width="74"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Label Controls" HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top" Width="195" Height="205">
+                <Grid x:Name="ComboBoxFont">
+                    <CheckBox x:Name="CheckBoxDetailed" Content="Detailed" IsChecked="True" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="CheckBoxPlotLabels" Content="Plot" IsChecked="True" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="C1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <Label Content="C2" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top"/>
+                    <Label Content="C3" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="TextBoxC3Name" HorizontalAlignment="Left" Height="23" Text="Group" VerticalAlignment="Top" Width="124" Margin="49,91,0,0"/>
+                    <TextBox x:Name="TextBoxC2Name" HorizontalAlignment="Left" Height="23" Text="Group" VerticalAlignment="Top" Width="124" Margin="49,59,0,0"/>
+                    <TextBox x:Name="TextBoxC1Name" HorizontalAlignment="Left" Height="23" Text="Group" VerticalAlignment="Top" Width="124" Margin="49,30,0,0"/>
+                    <ComboBox x:Name="ComboBoxFonts" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="163" SelectedItem="{Binding MyFontFamily, ElementName=ThisWindow}"  ItemsSource="{Binding Source={x:Static Fonts.SystemFontFamilies}}" Height="27"/>
+
+                    <Label Content="Font Size" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,154,0,0" RenderTransformOrigin="2.079,1.615"/>
+                    <xctk:DoubleUpDown x:Name="DoubleUpDownFontSize"  Minimum="1" Value="16" VerticalAlignment="Top"  Increment="1" FormatString="0" Maximum="200" Margin="73,157,0,0" HorizontalAlignment="Left" Width="100"/>
+                </Grid>
+            </GroupBox>
+            <Label Content="Right click: move" HorizontalAlignment="Left" Margin="15,574,0,0" VerticalAlignment="Top"/>
+            <Label Content="Left double-click: protein list" HorizontalAlignment="Left" Margin="15,551,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="ButtonPlot" IsEnabled="False" Content="Plot" HorizontalAlignment="Left" Margin="15,510,0,0" VerticalAlignment="Top" Width="80" Click="ButtonPlot_Click" Height="36"/>
+            <Button x:Name="ButtonSavePlot" Content="Save Plot" IsEnabled="False" HorizontalAlignment="Left" Margin="115,510,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSavePlot_Click" Height="36"/>
+            <TabControl Margin="210,10,10,37">
+                <TabItem Header="Venn Graph">
+                    <BelaGraph:BelaGraphControl x:Name="belaGraphControl2"/>
+                </TabItem>
+                <TabItem x:Name="TabPairWise" Header="Plot - Pairwise comparison">
+                    <DataGrid x:Name="DataGridPairWise" CanUserReorderColumns="False" CanUserSortColumns="False" AutoGenerateColumns="True" IsReadOnly="True" MouseDoubleClick="DataGridPairWise_MouseDoubleClick" LoadingRow="DataGridPairWise_LoadingRow">
+                    </DataGrid>
+                </TabItem>
+                <TabItem x:Name="TabLog" Header="Log">
+                    <RichTextBox x:Name="RichTextBoxLog" VerticalScrollBarVisibility="Auto" />
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <!--The wait window-->
+        <Border x:Name="WaitWindowWPF" BorderBrush="Black" BorderThickness="3"  Visibility="Collapsed" Background="#80000000">
+            <Grid>
+                <TextBlock Margin="0" TextWrapping="Wrap" Text="Please Wait..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="#7EFFFFFF"/>
+            </Grid>
+        </Border>
+    
+    </Grid>
+</UserControl>

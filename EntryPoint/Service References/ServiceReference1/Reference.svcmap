@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="820fcf4f-7826-4709-9fe6-c330b4ca10f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceHMM.xsd" MetadataType="Schema" ID="239e92e2-ab0f-44c3-b60b-fdc859fbd967" SourceId="1" SourceUrl="http://proteomics.fiocruz.br/hmmservice/ServiceHMM.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceHMM.disco" MetadataType="Disco" ID="c05d8fdb-d4bf-4cf0-b66c-ed5598781173" SourceId="1" SourceUrl="http://proteomics.fiocruz.br/hmmservice/ServiceHMM.svc?disco" />
+    <MetadataFile FileName="ServiceHMM1.xsd" MetadataType="Schema" ID="bd8f3d3a-a8f3-4fe4-bf08-b13eaf52785c" SourceId="1" SourceUrl="http://proteomics.fiocruz.br/hmmservice/ServiceHMM.svc?xsd=xsd0" />
+    <MetadataFile FileName="HMM.wsdl" MetadataType="Wsdl" ID="f26f01c7-79e0-4987-8355-0295163101b3" SourceId="1" SourceUrl="http://proteomics.fiocruz.br/hmmservice/ServiceHMM.svc?wsdl" />
+    <MetadataFile FileName="ServiceHMM2.xsd" MetadataType="Schema" ID="1cd3e005-c35e-4b92-b866-7efc08fe51ed" SourceId="1" SourceUrl="http://proteomics.fiocruz.br/hmmservice/ServiceHMM.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceHMM3.xsd" MetadataType="Schema" ID="22a73f58-32f7-4b3d-a9c9-444b0a2d4348" SourceId="1" SourceUrl="http://proteomics.fiocruz.br/hmmservice/ServiceHMM.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

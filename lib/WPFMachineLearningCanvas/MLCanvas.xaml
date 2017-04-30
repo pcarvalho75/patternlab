@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="WPFMachineLearningCanvas.MLCanvas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             MouseLeftButtonDown="UserControl_MouseLeftButtonDown" MouseRightButtonDown="UserControl_MouseRightButtonDown">
+    <Grid>
+        <Canvas Name="myCanvas" Background="Beige" Margin="0,0,0,35" />
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Label Content="X Max: "/>
+            <Label x:Name="LabelXMax" Content=" ? "/>
+            <Label Content="X Min: "/>
+            <Label x:Name="LabelXMin" Content=" ? "/>
+            <Label Content="Y Max: "/>
+            <Label x:Name="LabelYMax" Content=" ? "/>
+            <Label Content="Y Min: "/>
+            <Label x:Name="LabelYMin" Content=" ? "/>
+        </WrapPanel>
+    </Grid>
+</UserControl>

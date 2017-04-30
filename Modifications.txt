@@ -1,0 +1,12 @@
+New in version 1.2.29
+ - Dispersion Plot
+	-The plot button is remained unactive until the sparse matrix is loaded
+	-A help icon was included near the "Load Feature List button".
+
+ - Matrix normalization
+	 - The internal standard sparse matrix normalization method was included
+	 - Improved error handling
+	 - Inclusion of a message box confirming the normalized matrix has been saved to disk
+
+ - Proportional Venn
+	- Can correct for sparse matrices that are inproperly labeled (do not follow the pattern label 1, 2, 3, etc...)
